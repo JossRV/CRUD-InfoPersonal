@@ -108,10 +108,13 @@
                         <td><?=$key['especialidad']?></td>
                         <td><?=$key['sexo']?></td>
                         <td>
-                            <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button"><i class="fas fa-eye"></i></a>
+                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalToggle" onclick="verImg(<?=$key['id_infoPersonal']?>)"><i class="fas fa-eye"></i></a>
+                            <!-- <a data-bs-toggle="modal" onclick="verimagen(<?//= $key['id']?>)"
+                                    data-bs-target="#exampleModal"><img class="d-block mx-auto" height="50px"
+                                        src="<?//= $key['ruta'] ?>"></a> -->
                             <!-- <a href="./view/ver_imagenFull.php?id=<?//=$key['id_infoPersonal']?>"><i class="fas fa-eye"></i></a> -->
                         </td>
-                        <td><a href="./model/eliminar.php?id=<?=$key['id_infoPersonal']?>"><i class="fas fa-trash"></i></a></td>
+                        <td><a class="btn btn-primary" href="./model/eliminar.php?id=<?=$key['id_infoPersonal']?>"><i class="fas fa-trash"></i></a></td>
                     </tr>
                     <?php 
                         endforeach;
@@ -121,7 +124,7 @@
         </div>
     </div>
     <!-- modal -->
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" >
+    <div class="modal fade " id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" >
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -129,7 +132,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="img" id="img" style="height:100%; display:block; margin:auto"></div>
+                    <div class="img" id="img"></div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
