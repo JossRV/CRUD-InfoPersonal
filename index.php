@@ -94,6 +94,7 @@
                     <th>Sexo</th>
                     <th>Imagen de Perfil</th>
                     <th>Eliminar</th>
+                    <th>Actualizar</th>
                 </thead>
                 <tbody>
                     <?php 
@@ -109,12 +110,9 @@
                         <td><?=$key['sexo']?></td>
                         <td>
                             <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalToggle" onclick="verImg(<?=$key['id_infoPersonal']?>)"><i class="fas fa-eye"></i></a>
-                            <!-- <a data-bs-toggle="modal" onclick="verimagen(<?//= $key['id']?>)"
-                                    data-bs-target="#exampleModal"><img class="d-block mx-auto" height="50px"
-                                        src="<?//= $key['ruta'] ?>"></a> -->
-                            <!-- <a href="./view/ver_imagenFull.php?id=<?//=$key['id_infoPersonal']?>"><i class="fas fa-eye"></i></a> -->
                         </td>
                         <td><a class="btn btn-primary" href="./model/eliminar.php?id=<?=$key['id_infoPersonal']?>"><i class="fas fa-trash"></i></a></td>
+                        <td><a class="btn btn-primary" href="./view/vista-actualizar.php?id=<?=$key['id_infoPersonal']?>"><i class="fas fa-edit"></i></a></td>
                     </tr>
                     <?php 
                         endforeach;
